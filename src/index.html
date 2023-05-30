@@ -16,24 +16,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- output style -->
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header class="fixed top-0 backdrop-blur-[15px] w-full z-50 bg-[#141414]">
+    <header class="fixed top-0 backdrop-blur-3xl w-full z-50">
         <div class="container mx-auto">
-            <nav class="nav flex h-[90px] items-center justify-between">
-                <img src="./assets/icons/menu.svg" alt="menu" class="md:hidden mr-[42px]">
+            <nav class="nav flex h-[90px] items-center justify-between border-b-2 border-white border-opacity-10">
+                <img src="./assets/icons/menu.svg" alt="menu" class="md:hidden">
                 <a href="#" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
 
                 <ul
-                    class="nav__list flex gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] font-['Manrope'] hidden md:flex">
+                    class="nav__list flex gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] hidden md:flex">
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HOME</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HEADPHONES</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">SPEAKERS</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">EARPHONES</a></li>
                 </ul>
 
-                <img src="./assets/icons/cart.svg" alt="cart">
+                <img class="cursor-pointer" src="./assets/icons/cart.svg" alt="cart">
             </nav>
         </div>
     </header>
@@ -42,7 +43,7 @@
         <section id="intro" class="bg-[#141414] min-h-[729px]">
             <div class="container mx-auto">
                 <div class="wrapper flex items-center justify-between">
-                    <div class="intro-content text-white font-['Manrope']">
+                    <div class="intro-content text-white">
                         <p class="font-normal text-[14px] tracking-[10px] opacity-[0.5] mb-[24px]">NEW PRODUCT</p>
                         <h1 class="font-bold text-[56px] leading-[58px] max-w-[396px] tracking-[2px] mb-[24px]">XX99
                             Mark II
@@ -60,7 +61,7 @@
         </section>
         <section id="devices">
             <div class="container mx-auto pt-[200px] pb-[168px]">
-                <div class="wrapper flex justify-between font-['Manrope']">
+                <div class="wrapper flex justify-between">
                     <div
                         class="relative min-w-[354px] bg-[#F1F1F1] min-h-[204px] flex items-center justify-center flex-col pt-[114px] rounded-[8px]">
                         <img class="absolute top-[-80px]" src="./assets/images/devices/headphones.png" alt="headphone">
@@ -91,7 +92,7 @@
             <div class="container mx-auto">
                 <div class="wrapper flex flex-col gap-y-[48px]">
                     <div
-                        class="flex font-['Manrope'] bg-[#D87D4A] items-center justify-center gap-x-[138px] pt-[96px] rounded-[8px]">
+                        class="flex bg-[#D87D4A] items-center justify-center gap-x-[138px] pt-[96px] rounded-[8px]">
                         <img src="./assets/images/zx9.png" alt="zx9">
                         <div class="flex flex-col text-white">
                             <h1 class="font-bold text-[56px] tracking-[2px] leading-[58px] max-w-[261px] mb-[24px]">ZX9
@@ -106,7 +107,7 @@
 
                     <div
                         class="flex items-center pl-[95px] min-h-[320px] bg-[url('./assets/images/zx7-desk.png')] bg-no-repeat bg-cover bg-[100%] rounded-[8px]">
-                        <div class="font-['Manrope'] ">
+                        <div>
                             <h1 class="font-bold text-[28px] mb-[32px]">ZX7 SPEAKER</h1>
                             <button
                                 class="font-bold uppercase text-[13px] py-[15px] px-[30px] border-[1px] border-[#000] hover:bg-black hover:text-white">See
@@ -118,7 +119,7 @@
                     <div class="flex gap-x-[30px]">
                         <img src="./assets/images/yx1.png" alt="yx1">
                         <div
-                            class="font-['Manrope'] bg-[#F1F1F1] w-full flex flex-col justify-center pl-[95px] rounded-[8px]">
+                            class="bg-[#F1F1F1] w-full flex flex-col justify-center pl-[95px] rounded-[8px]">
                             <h1 class="font-bold text-[28px] mb-[32px]">YX1 EARPHONES</h1>
                             <button
                                 class="w-fit font-bold uppercase text-[13px] py-[15px] px-[30px] border-[1px] border-[#000] hover:bg-black hover:text-white">See
@@ -131,7 +132,7 @@
         <section id="user">
             <div class="container mx-auto">
                 <div class="wrapper py-[200px] flex items-center justify-between">
-                    <div class="font-['Manrope']">
+                    <div">
                         <h1 class="font-bold text-[40px] tracking-[1.43px] leading-[44px] max-w-[440px] mb-[32px]">
                             Bringing you the <span class="uppercase text-[#D87D4A]">best</span> audio gear</h1>
                         <p class="font-medium text-[15px] leading-[25px] max-w-[445px]">Located at the heart of New York
@@ -148,7 +149,7 @@
     </main>
 
     <footer class="bg-[#101010]">
-        <div class="container mx-auto pt-[75px] pb-[48px] font-['Manrope']">
+        <div class="container mx-auto pt-[75px] pb-[48px]">
             <nav class="nav flex items-center justify-between mb-[36px]">
 
                 <a href="#" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
