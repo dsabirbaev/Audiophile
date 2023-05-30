@@ -19,15 +19,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <header class="fixed top-0 backdrop-blur-3xl w-full z-50">
         <div class="container mx-auto">
-            <nav class="nav flex h-[90px] items-center justify-between border-b-2 border-white border-opacity-10">
+            <nav class="nav flex h-[90px] items-center justify-between border-b-2 px-5 border-white border-opacity-10">
                 <img src="./assets/icons/menu.svg" alt="menu" class="md:hidden">
                 <a href="#" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
 
-                <ul
-                    class="nav__list flex gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] hidden md:flex">
+                <ul class="nav__list gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] hidden md:flex">
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HOME</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HEADPHONES</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">SPEAKERS</a></li>
@@ -40,12 +39,13 @@
     </header>
 
     <main>
-        <section id="intro" class="bg-[#141414] min-h-[729px]">
+        <section id="intro" class="bg-[#141414]  min-h-[700px] md:min-h-[850px] lg:min-h-[729px] overflow-hidden">
             <div class="container mx-auto">
-                <div class="wrapper flex items-center justify-between">
-                    <div class="intro-content text-white">
-                        <p class="font-normal text-[14px] tracking-[10px] opacity-[0.5] mb-[24px]">NEW PRODUCT</p>
-                        <h1 class="font-bold text-[56px] leading-[58px] max-w-[396px] tracking-[2px] mb-[24px]">XX99
+                <div class="wrapper flex items-center justify-between relative">
+                    <div
+                        class="intro-content w-[379px] text-center mt-[18vh] md:mt-[30vh] lg:m-0 mx-auto lg:text-left text-white z-30">
+                        <p class="font-normal text-[14px] tracking-[10px] opacity-[0.5] mb-6">NEW PRODUCT</p>
+                        <h1 class="font-bold text-[56px] leading-[58px] max-w-[396px] tracking-[2px] mb-6">XX99
                             Mark II
                             Headphones</h1>
                         <p class="font-medium text-[15px] leading-[25px] max-w-[349px] opacity-[0.75] mb-[40px]">
@@ -55,46 +55,59 @@
                             class="bg-[#D87D4A] min-w-[160px] h-[48px] font-bold text-[13px] tracking-[1px] hover:bg-[#fbaf85]">See
                             Product</button>
                     </div>
-                    <img src="./assets/images/intro.png" alt="headphone" class="rounded-[50%]">
+
+                    <picture class="absolute lg:relative top-20 lg:top-0 scale-150 sm:scale-100 lg:scale-100">
+                        <source media="(max-width: 375px)" srcset="./assets/images/intro/intro-res.png">
+                        <source media="(max-width: 1024px)" srcset="./assets/images/intro/intro-res.png">
+                        <img src="./assets/images/intro/intro-main.png" alt="headphone" class="rounded-full">
+                    </picture>
                 </div>
             </div>
         </section>
-        <section id="devices">
-            <div class="container mx-auto pt-[200px] pb-[168px]">
-                <div class="wrapper flex justify-between">
-                    <div
-                        class="relative min-w-[354px] bg-[#F1F1F1] min-h-[204px] flex items-center justify-center flex-col pt-[114px] rounded-[8px]">
-                        <img class="absolute top-[-80px]" src="./assets/images/devices/headphones.png" alt="headphone">
-                        <h1 class="font-bold text-[18px] tracking-[1.29px] mb-[15px]">HEADPHONES</h1>
-                        <a class="flex font-bold text-[13px] opacity-[0.5] hover:text-[#D87D4A]" href="#">shop <img
-                                class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
-                    </div>
-
-                    <div
-                        class="relative min-w-[354px] bg-[#F1F1F1] min-h-[204px] flex items-center justify-center flex-col pt-[114px] rounded-[8px]">
-                        <img class="absolute top-[-80px]" src="./assets/images/devices/speakers.png" alt="speakers">
-                        <h1 class="font-bold text-[18px] tracking-[1.29px] mb-[15px]">SPEAKERS</h1>
-                        <a class="flex font-bold text-[13px] opacity-[0.5] hover:text-[#D87D4A]" href="#">shop <img
-                                class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
-                    </div>
-
-                    <div
-                        class="relative min-w-[354px] bg-[#F1F1F1] min-h-[204px] flex items-center justify-center flex-col pt-[114px] rounded-[8px]">
-                        <img class="absolute top-[-60px]" src="./assets/images/devices/earphones.png" alt="earphones">
-                        <h1 class="font-bold text-[18px] tracking-[1.29px] mb-[15px]">EARPHONES</h1>
-                        <a class="flex font-bold text-[13px] opacity-[0.5] hover:text-[#D87D4A]" href="#">shop <img
-                                class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="product">
+        <section id="devices" class="mt-[92px] md:mt-[148px] lg:mt-[200px]">
             <div class="container mx-auto">
-                <div class="wrapper flex flex-col gap-y-[48px]">
+                <div class="wrapper flex justify-between flex-col md:flex-row gap-y-[68px]">
+
+                    <div class="card m-2 bg-[#F1F1F1] md:w-[350px] text-center w-full pb-[22px]">
+                        <img class="card-image translate-y-[-80px] block mx-auto"
+                            src="./assets/images/devices/headphones.png" alt="head">
+                        <h1 class="font-bold text-[18px] mt-[43px]">HEADPHONES</h1>
+                        <a class="font-bold mt-4 text-[13px] opacity-[0.5] hover:text-[#D87D4A] flex items-center justify-center"
+                            href="#">shop <img class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
+                    </div>
+
+                    <div class="card m-2 bg-[#F1F1F1] md:w-[350px] text-center w-full pb-[22px]">
+                        <img class="card-image translate-y-[-80px] block mx-auto"
+                            src="./assets/images/devices/speakers.png" alt="head">
+                        <h1 class="font-bold text-[18px] mt-[43px]">SPEAKER</h1>
+                        <a class="font-bold mt-4 text-[13px] opacity-[0.5] hover:text-[#D87D4A] flex items-center justify-center"
+                            href="#">shop <img class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
+                    </div>
+
+                    <div class="card m-2 bg-[#F1F1F1] md:w-[350px] text-center w-full pb-[22px]">
+                        <img class="card-image translate-y-[-80px] block mx-auto"
+                            src="./assets/images/devices/earphones.png" alt="head">
+                        <h1 class="font-bold text-[18px] mt-[43px]">EARPHONES</h1>
+                        <a class="font-bold mt-4 text-[13px] opacity-[0.5] hover:text-[#D87D4A] flex items-center justify-center"
+                            href="#">shop <img class="ml-[13px]" src="./assets/icons/arrow.svg" alt="arrow"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="product" class="mt-[120px] md:mt-[96px] lg:mt-[160px]">
+            <div class="container mx-auto">
+                <div class="wrapper flex flex-col gap-y-[24px] md:gap-y-[32px] lg:gap-y-[48px]">
                     <div
-                        class="flex bg-[#D87D4A] items-center justify-center gap-x-[138px] pt-[96px] rounded-[8px]">
-                        <img src="./assets/images/zx9.png" alt="zx9">
-                        <div class="flex flex-col text-white">
+                        class="flex flex-col lg:flex-row items-center lg:items-stretch bg-[#D87D4A]  rounded-[8px] min-h-[650px] lg:min-h-[560px]">
+
+                        <div class="relative w-[50%] h-[50vh] lg:h-auto">
+                            <img src="./assets/images/zx9.png" alt="zx9"
+                                class="absolute bottom-[60px] lg:bottom-0 left-[50%] lg:left-[77px] translate-x-[-50%] lg:translate-x-0 w-[197px] lg:w-auto z-10">
+                            <img src="./assets/icons/bg-speaker.svg" alt="line" class="absolute left-[0px]  w-[500%]">
+                        </div>
+                        <div
+                            class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left text-white w-[50%]  lg:h-auto pb-[64px] lg:pb-0">
                             <h1 class="font-bold text-[56px] tracking-[2px] leading-[58px] max-w-[261px] mb-[24px]">ZX9
                                 SPEAKER</h1>
                             <p class="font-medium opacity-[0.75] max-w-[349px] mb-[40px]">Upgrade to premium speakers
@@ -105,21 +118,21 @@
                         </div>
                     </div>
 
-                    <div
-                        class="flex items-center pl-[95px] min-h-[320px] bg-[url('./assets/images/zx7-desk.png')] bg-no-repeat bg-cover bg-[100%] rounded-[8px]">
+                    <div class="zx flex items-center pl-[24px] md:pl-[62px] lg:pl-[95px] min-h-[320px]  rounded-[8px]">
                         <div>
                             <h1 class="font-bold text-[28px] mb-[32px]">ZX7 SPEAKER</h1>
                             <button
                                 class="font-bold uppercase text-[13px] py-[15px] px-[30px] border-[1px] border-[#000] hover:bg-black hover:text-white">See
                                 Product</button>
                         </div>
-                        <!-- <img src="./assets/images/zx7.png" alt="zx7" class="w-[auto] absolute right-0 top-[-500px]"> -->
+
                     </div>
 
-                    <div class="flex gap-x-[30px]">
-                        <img src="./assets/images/yx1.png" alt="yx1">
+                    <div class="flex flex-col md:flex-row gap-y-[24px] md:gap-y-[0px] md:gap-x-[11px] lg:gap-x-[30px]">
+                        <img src="./assets/images/yx1.png" alt="yx1"
+                            class="min-w-[50%] w-full h-[200px] object-cover md:h-[320px] rounded-[8px]">
                         <div
-                            class="bg-[#F1F1F1] w-full flex flex-col justify-center pl-[95px] rounded-[8px]">
+                            class="bg-[#F1F1F1] w-full flex flex-col justify-center pl-[95px] rounded-[8px] min-w-[50%] min-h-[200px] md:h-[320px]">
                             <h1 class="font-bold text-[28px] mb-[32px]">YX1 EARPHONES</h1>
                             <button
                                 class="w-fit font-bold uppercase text-[13px] py-[15px] px-[30px] border-[1px] border-[#000] hover:bg-black hover:text-white">See
@@ -129,50 +142,57 @@
                 </div>
             </div>
         </section>
-        <section id="user">
+        <section id="user" class="my-[120px] md:my-[96px] lg:my-[200px]">
             <div class="container mx-auto">
-                <div class="wrapper py-[200px] flex items-center justify-between">
+                <div
+                    class="wrapper flex flex-col lg:flex-row items-center justify-between gap-y-[40px] md:gap-y-[63px] lg:gap-y-[0px] text-center lg:text-left">
                     <div>
-                        <h1 class="font-bold text-[40px] tracking-[1.43px] leading-[44px] max-w-[440px] mb-[32px]">
+                        <h1
+                            class="font-bold text-[40px] tracking-[1.43px] leading-[44px] max-w-full lg:max-w-[440px] mb-[32px]">
                             Bringing you the <span class="uppercase text-[#D87D4A]">best</span> audio gear</h1>
-                        <p class="font-medium text-[15px] leading-[25px] max-w-[445px]">Located at the heart of New York
+                        <p class="font-medium text-[15px] leading-[25px] max-w-full lg:max-w-[445px]">Located at the
+                            heart of New York
                             City, Audiophile is the premier store for high end
                             headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury
                             demonstration rooms available for you to browse and experience a wide range of our products.
                             Stop by our store to meet some of the fantastic people who make Audiophile the best place to
                             buy your portable audio equipment.</p>
                     </div>
-                    <img src="./assets/images/user.jpg" alt="user">
+                    <img src="./assets/images/user.jpg" alt="user" class="w-full lg:w-auto order-[-1] lg:order-1">
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="bg-[#101010]">
-        <div class="container mx-auto pt-[75px] pb-[48px]">
-            <nav class="nav flex items-center justify-between mb-[36px]">
+        <div class="container mx-auto pt-[52px] md:pt-[60px] lg:pt-[75px] pb-[48px] text-white px-2 md:px-5">
+            <nav class="nav flex flex-col lg:flex-row items-center justify-center md:items-start md:justify-start lg:items-center lg:justify-between mb-[48px] md:mb-[36px] gap-y-[48px] md:gap-y-[32px] lg:gap-y-[0px]">
 
                 <a href="#" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
 
-                <ul
-                    class="nav__list flex gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] hidden md:flex">
+                <ul class="nav__list flex flex-col md:flex-row gap-x-[34px] font-bold text-[13px] tracking-[2px] gap-y-[16px] md:gap-y-[0px] items-center md:items-start">
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HOME</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HEADPHONES</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">SPEAKERS</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">EARPHONES</a></li>
                 </ul>
             </nav>
-            <div class="text-white flex justify-between items-end mb-[56px]">
-                <p class="font-medium text-[15px] leading-[25px] max-w-[540px] opacity-[0.5]">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and
-                    sound specialists who are devoted to helping you get the most out of personal audio. Come and visit
-                    our demo facility - we’re open 7 days a week.</p>
-                <div class="text-[24px]">
+
+            <p class="font-medium text-[15px] leading-[25px] max-w-full md:max-w-[689px] lg:max-w-[540px] opacity-[0.5] mb-[48px] md:mb-[80px] lg:mb-[56px] text-center md:text-left">Audiophile is an all
+                in one stop to fulfill your audio needs. We're a small team of music lovers and
+                sound specialists who are devoted to helping you get the most out of personal audio. Come and visit
+                our demo facility - we’re open 7 days a week.</p>
+
+
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-y-[48px] md:gap-y-[0px]">
+                <p class="opacity-[0.5] font-bold text-[15px]">Copyright 2021. All Rights Reserved</p>
+                <div class="text-[24px] cursor-pointer">
                     <i class='bx bxl-facebook-square hover:text-[#D87D4A]'></i>
                     <i class='bx bxl-twitter mx-[16px] hover:text-[#D87D4A]'></i>
                     <i class='bx bxl-instagram hover:text-[#D87D4A]'></i>
-                </div>    
+                </div>
             </div>
-            <p class="text-white opacity-[0.5] font-bold text-[15px]">Copyright 2021. All Rights Reserved</p>
+
         </div>
     </footer>
 </body>

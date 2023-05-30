@@ -7,3 +7,48 @@
 body{
     font-family: 'Manrope', sans-serif;
 }
+
+.card-image{
+    filter: drop-shadow(-10px 93px 37px silver);
+}
+
+.speaker{
+    background-image: url(./assets/icons/bg-speaker.svg);
+    background-repeat: no-repeat;
+    background-position: -5% 100%;
+   
+}
+
+@media only screen and (max-width: 1024px) {
+    .speaker{
+        /* background-position: -250% -200%; */
+        background-position-x: calc(100% - 50%);
+        background-position-y: calc(100% - 500%);
+    }
+}
+
+.zx{
+    background-image: url(./assets/images/zx7/zx7-desk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .zx{
+        background-image: url(./assets/images/zx7/zx7-table.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .zx{
+        background-image: url(./assets/images/zx7/zx7-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+    }
+}
