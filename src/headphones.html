@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audiophile</title>
+    <title>Audiophile | Headphones</title>
+    <link rel="icon" href="./assets/icons/fav-icon.svg">
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fonts -->
@@ -24,13 +25,13 @@
         <div class="container mx-auto">
             <nav class="nav flex h-[90px] items-center justify-between border-b-2 px-5 border-white border-opacity-10">
                 <img src="./assets/icons/menu.svg" alt="menu" class="md:hidden">
-                <a href="#" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
+                <a href="./index.html" class="flex"> <img src="./assets/icons/logo.svg" alt="logo"></a>
 
                 <ul class="nav__list gap-x-[34px] text-white font-bold text-[13px] tracking-[2px] hidden md:flex">
-                    <li><a class="nav__link hover:text-[#D87D4A]" href="#">HOME</a></li>
+                    <li><a class="nav__link hover:text-[#D87D4A]" href="./index.html">HOME</a></li>
                     <li><a class="nav__link hover:text-[#D87D4A]" href="#">HEADPHONES</a></li>
-                    <li><a class="nav__link hover:text-[#D87D4A]" href="#">SPEAKERS</a></li>
-                    <li><a class="nav__link hover:text-[#D87D4A]" href="#">EARPHONES</a></li>
+                    <li><a class="nav__link hover:text-[#D87D4A]" href="./speakers.html">SPEAKERS</a></li>
+                    <li><a class="nav__link hover:text-[#D87D4A]" href="./earphones.html">EARPHONES</a></li>
                 </ul>
 
                 <img class="cursor-pointer" src="./assets/icons/cart.svg" alt="cart">
@@ -41,24 +42,25 @@
     <main>
         <section id="intro" class="bg-black">
             <div class="container mx-auto">
-                <div class="wrapper h-[336px] flex items-center justify-center pt-[100px]">
+                <div class="wrapper h-[192px] md:h-[336px] flex items-center justify-center pt-[100px]">
                     <h1 class="text-white text-[40px] font-bold">HEADPHONES</h1>
                 </div>
             </div>
         </section>
-        <section id="headphones" class="mt-[160px]">
+        <section id="headphones" class=" mt-[64px] md:mt-[120px] lg:mt-[160px]">
             <div class="container mx-auto">
-                <div class="wrapper flex flex-col gap-y-[160px]">
-                    <div class="flex gap-x-[125px] items-center">
-                        <div class="min-w-[540px] min-h-[560px] bg-[#F1F1F1] flex items-center justify-center">
-                            <img class="card-image" src="./assets/images/headphones/1.png" alt="headphone">
+                <div class="wrapper flex flex-col gap-y-[120px] lg:gap-y-[160px]">
+
+                    <div class="flex flex-col lg:flex-row lg:gap-x-[125px] gap-y-[32px] md:gap-y-[52px] lg:gap-y-0 items-center">
+                        <div class="w-full lg:min-w-[50%] min-h-[352px] lg:min-h-[560px] bg-[#F1F1F1] flex items-center justify-center">
+                            <img class="card-image w-[220px] lg:w-auto" src="./assets/images/headphones/1.png" alt="headphone">
                         </div>
 
-                        <div class="font-['Manrope'] max-w-[445px]">
-                            <p class="text-[#D87D4A] text-[14px] font-normal tracking-[10px] mb-4">NEW PRODUCT</p>
-                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-8">XX99 Mark
+                        <div class="font-['Manrope'] w-full lg:max-w-[50%] text-center lg:text-left">
+                            <p class="text-[#D87D4A] text-[14px] font-normal tracking-[10px] mb-6 md:mb-4">NEW PRODUCT</p>
+                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-6 md:mb-8">XX99 Mark
                                 II Headphones</h1>
-                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-10">The new
+                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-6 md:mb-10">The new
                                 XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your
                                 premium headphone experience by reproducing the balanced depth and precision of
                                 studio-quality sound.</p>
@@ -68,14 +70,14 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-x-[125px] items-center">
+                    <div class="flex flex-col lg:flex-row lg:gap-x-[125px] gap-y-[32px] md:gap-y-[52px] lg:gap-y-0 items-center">
 
-                        <div class="font-['Manrope'] max-w-[445px]">
+                        <div class="font-['Manrope'] w-full lg:max-w-[50%] text-center lg:text-left">
 
-                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-8">XX99 Mark
+                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-6 md:mb-8">XX99 Mark
                                 I
                                 Headphones</h1>
-                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-10">As the gold
+                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-6 md:mb-10">As the gold
                                 standard for headphones, the classic XX99 Mark I offers detailed and accurate audio
                                 reproduction for audiophiles, mixing engineers, and music aficionados alike in studios
                                 and on the go.</p>
@@ -84,21 +86,21 @@
                                 Product</button>
                         </div>
 
-                        <div class="min-w-[540px] min-h-[560px] bg-[#F1F1F1] flex items-center justify-center">
-                            <img class="card-image" src="./assets/images/headphones/2.png" alt="headphone">
+                        <div class="w-full lg:min-w-[50%] min-h-[352px] lg:min-h-[560px] bg-[#F1F1F1] flex items-center justify-center order-[-1] lg:order-1">
+                            <img class="card-image w-[220px] lg:w-auto" src="./assets/images/headphones/2.png" alt="headphone">
                         </div>
                     </div>
 
-                    <div class="flex gap-x-[125px] items-center">
-                        <div class="min-w-[540px] min-h-[560px] bg-[#F1F1F1] flex items-center justify-center">
-                            <img class="card-image" src="./assets/images/headphones/3.png" alt="headphone">
+                    <div class="flex flex-col lg:flex-row lg:gap-x-[125px] gap-y-[32px] md:gap-y-[52px] lg:gap-y-0 items-center">
+                        <div class="w-full lg:min-w-[50%] min-h-[352px] lg:min-h-[560px] bg-[#F1F1F1] flex items-center justify-center">
+                            <img class="card-image w-[220px] lg:w-auto" src="./assets/images/headphones/3.png" alt="headphone">
                         </div>
 
-                        <div class="font-['Manrope'] max-w-[445px]">
+                        <div class="font-['Manrope'] w-full lg:max-w-[50%] text-center lg:text-left">
 
-                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-8">XX59
+                            <h1 class="font-bold text-[40px] leading-[44px] tracking-[1.43px] uppercase mb-6 md:mb-8">XX59
                                 Headphones</h1>
-                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-10">Enjoy your
+                            <p class="text-black opacity-[0.5] leading-[25px] font-medium text-[15px] mb-6 md:mb-10">Enjoy your
                                 audio almost anywhere and customize it to your specific tastes with the XX59 headphones.
                                 The stylish yet durable versatile wireless headset is a brilliant companion at home or
                                 on the move.</p>
@@ -111,7 +113,7 @@
             </div>
         </section>
 
-        <section id="devices" class="lg:mt-[240px]">
+        <section id="devices" class="mt-[172px] md:mt-[120px] lg:mt-[240px]">
             <div class="container mx-auto">
                 <div class="wrapper flex justify-between flex-col md:flex-row gap-y-[68px]">
 
